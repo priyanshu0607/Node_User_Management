@@ -3,7 +3,6 @@ require('dotenv').config();
 const express = require('express');
 const expressLayout = require('express-ejs-layouts');
 const methodOverride = require('method-override');
-const { flash } = require('express-flash-message');
 const session = require('express-session');
 const connectDB = require('./server/config/db');
 
@@ -31,9 +30,6 @@ app.use(
     }
   })
 );
-
-// Flash Messages
-//app.use(flash({ sessionKeyName: 'flashMessage' }));
 
 // Templating Engine
 app.use(expressLayout);
